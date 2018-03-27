@@ -1,0 +1,21 @@
+<h1>Log In</h1>
+
+<%= form_for :user, url: '/users/log_in', method: :post do |form| %>
+
+  <table>
+    <tr>
+      <td><%= form.label :email %></td>
+      <td><%= form.email_field :email %></td>
+    </tr>
+
+    <tr>
+      <td><%= form.label :password %></td>
+      <td><%= form.password_field :password %></td>
+    </tr>
+  </table><br>
+
+<%= form.submit "Log In" %>
+
+<% end %>
+
+<h4>Don't have an account? <%= link_to("Sign Up!", user_sign_up_path) %></h4>

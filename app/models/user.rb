@@ -1,7 +1,7 @@
 #Schema:
 # name string
 # email string
-# role integer
+# role = 0 integer
 # password string
 
 class User < ApplicationRecord

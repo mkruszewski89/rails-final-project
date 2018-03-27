@@ -8,7 +8,15 @@
   </head>
 
   <header>
+    <nav>
+      <% if !current_user %>
+        <%= link_to("Log In", user_log_in_path) %>
+      <% else %>
+        <%= link_to("My Account", user_path(current_user)) %>
+      <% end %>
+    </nav>
 
+    <%= content_tag(:div, flash[:message], :id => "flash_message") if flash[:message] %>
   </header>
 
   <body>
